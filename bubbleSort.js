@@ -1,5 +1,7 @@
 // tpye "npm start" to run this code
 
+const chalk = require('chalk');
+
 const swap = (e) => {
     let x = e[1];
     let y = e[2];
@@ -9,7 +11,7 @@ const swap = (e) => {
 
 const asc = (arr) => {
     let before = arr.join(' ')
-    console.log(`Before Sorted: ${before}`)
+    console.log(`Before Sorted: ${chalk.yellow(before)}`)
 
     let compare = (arr.length - 1) * (arr.length - 1);
 
@@ -25,7 +27,7 @@ const asc = (arr) => {
         
     }
     let after = arr.join(' ')
-    console.log(`After Sorted: ${after}`)
+    console.log(`After Sorted: ${chalk.green(after)}`)
 }
 
 asc([7, 3, 4, 9]);
