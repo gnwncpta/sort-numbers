@@ -2,18 +2,12 @@
 
 const chalk = require('chalk');
 
-const swap = (e) => {
-    let x = e[1];
-    let y = e[2];
-    
-    return [x, y] = [y, x]
-}
-
 const asc = (arr) => {
     let before = arr.join(' ')
     console.log(`Before Sorted: ${chalk.yellow(before)}`)
 
-    let compare = (arr.length - 1) * (arr.length - 1);
+    // jumlah perbandingannya adalah
+    // (panjang data - 1) * (panjang data - 1) = hasil
 
     for(let i = 0; i < arr.length - 1; i++){
 
@@ -26,6 +20,7 @@ const asc = (arr) => {
         }
         
     }
+    
     let after = arr.join(' ')
     console.log(`After Sorted: ${chalk.green(after)}`)
 }
